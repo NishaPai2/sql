@@ -209,5 +209,11 @@ Consider, for example, concepts of fariness, inequality, social structures, marg
 
 
 ```
-Your thoughts...
+In my daily work as a dietitian, I see how healthcare data systems around the world can affect people’s access to care. Medical records, nutrition databases, and hospital systems make assumptions about patients. For example, some systems continue to divide people into just male or female and assume a standard family structure of two parents and children. These assumptions can make it harder to care for people who do not fit these categories, such as single parents, non-traditional families, or people with different gender identities.
+
+As a Sri Lankan woman married to a South Indian man, I notice how these assumptions could affect families like mine. Even small differences in cultural or family background can be difficult to record in rigid systems. In nutrition, many databases assume standard diets or typical growth patterns, which may not reflect cultural foods or different metabolic needs. Large hospital systems may also aggregate data in ways that do not show minority communities or patients with special needs. Even when the goal is to help people, the way data is recorded can make some patients less visible or harder to support.
+
+In Canada, these issues are improving. Electronic medical records and nutrition systems which are more flexible to make it easier for healthcare providers to deliver care that is personalized, fair, and culturally sensitive.
+
+This artcile highlights how data systems are more than just computers or numbers. They can affect people's lives. In healthcare, choices made in these systems can change people’s access to care and whether everyone is treated equally.
 ```
