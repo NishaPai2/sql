@@ -47,6 +47,32 @@ There are several tools online you can use, I'd recommend [Draw.io](https://www.
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
 
+```
+Here are some of my thoughts when putting the logical model together:
+CUSTOMER TABLE:
+- email: to look up online orders easily
+- customer_created_at: thought it would be interesting to keep track of customer acquisition: how many new customers the bookstore got every month/year, who are newest vs long-term customers etc.
+
+EMPLOYEE TALBE:
+- employee_role and employee_hire_date: useful for HR tracking
+
+BOOK TABLE:
+- author: may be useful for cataloging and reporting to see best selling authors
+- book_genre: may help customers finding books by category which I usually want to do myself when I got to a bookstore; for the store - can help to see which genres are selling best and create promotions, recommendations, Staff Picks etc. 
+
+ORDERS TABLE:
+- shipping_postal_code: useful to track delivery for that particular order
+- order_status: keeping track of pending vs completed orders
+
+ORDER ITEM TABLE: can keep a record each book in an order individually, allowing one order to include multiple books, track quantities and prices. 
+
+STAFF PICKS TABLE: this lets employees highlight their favorite books. Each pick can be ranked, for example from 1 to 3, so we can see which books employees recommend the most. This makes it easy to show popular picks to customers and track trends over time.  
+
+- staffpick_ranking: allows to track book ranking within those employee's picked as favorite. I personally find this super helpful when I'm shopping for a good book.  
+
+BOOK FORMAT TABLE: I added this table to handle different versions of the same book, like hardcover, paperback, or ebook.
+```
+
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
 
@@ -56,7 +82,7 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+The bookstore can store customer addresses in two ways. Type 1 SCD overwrites old addresses, so each customer always has only one address and the old one is lost. Type 2 SCD keeps all past addresses by adding a new row each time a customer moves, while keeping the old addresses in the table. Columns like valid_from, valid_to, or is_current can show which address is the current one.
 ```
 
 ***
@@ -191,5 +217,18 @@ Consider, for example, concepts of labour, bias, LLM proliferation, moderating c
 
 
 ```
-Your thoughts...
+This story highlights several ethical issues around AI and machine learning.
+
+Even though AI seems automatic, it really depends on people. Before a system can recognize objects or understand language, someone has to prepare all the data it learns from. That work takes hours of careful, often tedious effort, usually unnoticed and poorly paid. And it’s not just the people working directly on AI. these systems also rely on content created by others, like articles, photos, or books, from industries that never expected their work to be used for machine learning. In a way, AI borrows from a massive network of human labor, both visible and invisible.
+
+How data is collected and organized matters a lot. Humans decide what counts as important, how to sort things, and what labels to apply. These decisions reflect personal assumptions, culture, and societal norms. When AI learns from this, it can repeat the same patterns, sometimes unfairly. Certain groups, ideas, or perspectives can be misrepresented or treated as “normal” while others are ignored. Small choices in labeling and categorization can have big effects when these systems are used in the real world.
+
+As AI spreads into more areas of life, the consequences grow. People rely on it to make decisions, filter information, and even judge situations. Mistakes or hidden biases can have real impacts. Humans still need to oversee and correct these systems because machines don’t understand fairness or context on their own.
+
+Transparency is another issue. It’s easy to assume AI is independent, but every layer (i.e. how it’s structured, what it’s trained on) depends on human choices. This raises questions about who benefits from AI, whose work is invisible, and who has the power to shape these tools.
+
+Finally, society needs to think about how these systems are used. They can influence opinions, behaviors, and decisions on a large scale. Even small errors or hidden biases can cause real harm. Careful design, ongoing review, and responsibility are key to making sure AI helps rather than hurts. Technology isn’t separate from society; it reflects human culture, norms, and values, for better or worse.
+
+In the end, AI may look like it runs on its own, but it’s built on the work, choices, and judgment of humans—both the people who directly train it and the creators of the content it learns from. Understanding this makes us ask how do we make AI fair, responsible, and respectful of all the people who make it possible?
+
 ```
